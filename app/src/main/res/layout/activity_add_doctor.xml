@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddDoctorActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/bgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/header"
+        android:theme="@style/ToolbarTheme"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="55dp">
+
+            <TextView
+                android:id="@+id/tvNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="55dp"
+                android:elevation="10dp"
+                android:text="Click here to view doctor list"
+                android:textColor="@color/white"
+                android:textSize="15dp"/>
+
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="#2196F3"
+                android:pointerIcon="grab"/>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvAdddoctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:elevation="10dp"
+        android:text="ADD DOCTOR"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/ivCircle"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:src="@drawable/circletransparent"
+        android:layout_below="@+id/bgHeader"
+        android:layout_marginLeft="-25dp"
+        android:layout_marginTop="-5dp"/>
+
+
+    <ImageView
+        android:id="@+id/ivCircle2"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/circle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-80dp"
+        android:layout_marginBottom="-30dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bgHeader"
+        android:layout_margin="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="50dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+
+                        <EditText
+                            android:id="@+id/etDoctorname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:drawablePadding="10dp"
+                            android:hint="Doctor Name"
+                            android:inputType="text"
+                            android:padding="20dp"
+                            android:textColorHint="#606060"
+                            android:textSize="15sp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+
+                        <EditText
+                            android:id="@+id/etContactno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:drawablePadding="10dp"
+                            android:hint="Contact No"
+                            android:inputType="number"
+                            android:padding="20dp"
+                            android:textColorHint="#606060"
+                            android:textSize="15sp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+
+                        <EditText
+                            android:id="@+id/etAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:drawablePadding="10dp"
+                            android:hint="Address"
+                            android:inputType= "text"
+                            android:padding="20dp"
+                            android:textColorHint="#606060"
+                            android:textSize="15sp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+
+                        <EditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:drawablePadding="10dp"
+                            android:hint="Email ID"
+                            android:inputType= "text"
+                            android:padding="20dp"
+                            android:textColorHint="#606060"
+                            android:textSize="15sp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+
+                        <EditText
+                            android:id="@+id/etQualification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:drawablePadding="10dp"
+                            android:hint="Qualification"
+                            android:inputType="text"
+                            android:padding="20dp"
+                            android:textColorHint="#606060"
+                            android:textSize="15sp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+
+                        <EditText
+                            android:id="@+id/etSpecification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:drawablePadding="10dp"
+                            android:hint="Specification"
+                            android:inputType="text"
+                            android:padding="20dp"
+                            android:textColorHint="#606060"
+                            android:textSize="15sp"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv"
+                android:layout_alignLeft="@id/cv"
+                android:layout_alignRight="@id/cv"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="65dp"
+                android:elevation="10dp">
+
+                <Button
+                    android:id="@+id/btnAdddoctor"
+                    style="@style/btnStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_color"
+                    android:text="Add" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

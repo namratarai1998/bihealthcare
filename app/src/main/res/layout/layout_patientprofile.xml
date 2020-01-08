@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp">
+
+    <TextView
+        android:id="@+id/tvPatientname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Name"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPatientname"
+        android:textSize="20dp"
+        android:text="Age"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Gender"
+        android:textColorHint="#606060"
+        android:layout_below="@+id/tvAge"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvGender"
+        android:textSize="20dp"
+        android:text="Address"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAddress"
+        android:textSize="20dp"
+        android:text="Contact No"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvWard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvContact"
+        android:textSize="20dp"
+        android:text="Ward Name"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvDoctorappointed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Doctor Appointed"
+        android:textColorHint="#606060"
+        android:layout_below="@+id/tvWard"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvReason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDoctorappointed"
+        android:textSize="20dp"
+        android:text="Reason for Admittance"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvDisease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Diagnosed Disease"
+        android:textColorHint="#606060"
+        android:layout_below="@+id/tvReason"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvTreatment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDisease"
+        android:textSize="20dp"
+        android:text="Treatment Taken"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvPatienttype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTreatment"
+        android:textSize="20dp"
+        android:text="Patient Type"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvDateadmitted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPatienttype"
+        android:textSize="20dp"
+        android:text="Date Admitted"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvDatedischarged"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDateadmitted"
+        android:textSize="20dp"
+        android:text="Date Discharged"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvStay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDatedischarged"
+        android:textSize="20dp"
+        android:text="Length of Stay"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

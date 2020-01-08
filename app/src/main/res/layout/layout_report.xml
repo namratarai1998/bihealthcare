@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvPatientname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Name"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPatientname"
+        android:textSize="20dp"
+        android:text="Age"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Gender"
+        android:textColorHint="#606060"
+        android:layout_below="@+id/tvAge"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvGender"
+        android:textSize="20dp"
+        android:text="Address"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAddress"
+        android:textSize="20dp"
+        android:text="Contact No"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvWard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvContact"
+        android:textSize="20dp"
+        android:text="Ward Name"
+        android:textColorHint="#606060"
+        android:layout_marginBottom="10dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.healthcare">
+    
+<<<<<<< HEAD
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+=======
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
+    <application
+      
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+<<<<<<< HEAD
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ViewPagerActivity"></activity>
+        <activity android:name=".DoctorprofileActivity" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+=======
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".RegistrationActivity">
+        </activity>
+        <activity android:name=".LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+        
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PatientsatisfactionActivity">
+        
+>>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
+        </activity>
+        <activity android:name=".PatientsatisfactionActivity"></activity>
+        <activity android:name=".PatientprofileActivity" />
+<<<<<<< HEAD
+=======
+        <activity android:name=".PatientVisualization" />
+        <activity android:name=".ReportActivity" />
+>>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
+        <activity android:name=".DischargeActivity" />
+        <activity android:name=".PatientlistActivity" />
+        <activity android:name=".DoctorlistActivity" />
+        <activity android:name=".AddDoctorActivity" />
+        <activity android:name=".AddpatientActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".PatientVisualization" />
+    </application>
+
+</manifest>
