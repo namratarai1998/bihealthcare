@@ -7,6 +7,8 @@ import android.widget.Toast;
 
 import com.example.healthcare.LoginActivity;
 import com.example.healthcare.MainActivity;
+import com.example.healthcare.MainNurseActivity;
+import com.example.healthcare.MainPatientActivity;
 import com.example.healthcare.R;
 
 import java.util.HashMap;
@@ -26,74 +28,84 @@ public class LoginController {
     //    private String useremail;
 //    private String password;
     boolean isSuccess = false;
+    boolean isNurse = false;
+    boolean isDoctor = false;
+    boolean isUser = false;
     private static String tempToken = "";
     private static String tempEmail = "";
+    private static int tempUserId = 0;
     UserModel userModel;
 
     public LoginController(UserModel userModel) {
         this.userModel = userModel;
 
     }
+    public LoginController(Context context,UserModel userModel) {
+        this.userModel = userModel;
+
+    }
 
     public boolean checkLogin() {
-
         UserAPI patientAPI = APISetting.createAPIInstance().create(UserAPI.class);
         Call<LoginResponse> patientCall = patientAPI.loginValidation(userModel);
-
         try {
             Response<LoginResponse> res = patientCall.execute();
             if (res.body().isStatus()) {
+                String type = res.body().getUsertype();
+                System.out.println(res.body().getAccessToken());
+                    System.out.println(res.body().getUsertype());
                 tempToken = res.body().getAccessToken();
                 tempEmail = res.body().getEmail();
+                tempUserId = res.body().getUserId();
                 APISetting.Cookie = tempToken;
-                isSuccess = true;
+                if(type.equals("Doctor")){
+                   isDoctor=true;
+                   isSuccess=true;
+                }else if(type.equals("Nurse")){
+                    isNurse=true;
+                    isSuccess=true;
+                }else if(type.equals("User")){
+                    isUser=true;
+                    isSuccess=true;
+                }
+                return isSuccess;
             }
         }catch (Exception e){
             System.out.println(e.getLocalizedMessage());
         }
-
-
-//        patientCall.enqueue(new Callback<LoginResponse>() {
-//            @Override
-//            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-//                if (!response.body().isStatus()) {
-//                    ShowMessage.AlertMessage("Error", response.body().getMesasge(), R.color.bgColor, context);
-//                    return;
-//                } else {
-//                    System.out.println("true rishav");
-//                    isSuccess = true;
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onFailure(Call<LoginResponse> call, Throwable t) {
-//                ShowMessage.AlertMessage("Error", t.getLocalizedMessage(), R.color.bgColor, context);
-//            }
-//        });
-//        UserAPI userAPI = APISetting.createAPIInstance().create(UserAPI.class);
-//        Map<String, String> loginMap = new HashMap<>();
-//        loginMap.put("email", useremail);
-//        loginMap.put("password", password);
-//        Call<LoginResponse> loginCall = userAPI.loginValidation(loginMap);
-//        try {
-//            Response<LoginResponse> res = loginCall.execute();
-//            System.out.println(res.body().getUserId());
-//            System.out.println(res.body().isStatus());
-//            System.out.println(res.body().getMesasge());
-//            System.out.println(res.body().getEmail());
-////            if (res.body().isStatus()) {
-////                tempToken = res.body().getAccessToken();
-////                tempEmail = res.body().getEmail();
-////                APISetting.Cookie = tempToken;
-////                isSuccess = true;
-////            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return isSuccess;
-//       }
-        System.out.println(isSuccess);
         return isSuccess;
+    }
+
+    public boolean isSuccess() {
+        return isSuccess;
+    }
+
+    public void setSuccess(boolean success) {
+        isSuccess = success;
+    }
+
+    public boolean isNurse() {
+        return isNurse;
+    }
+
+    public boolean isUser() {
+        return isUser;
+    }
+
+    public void setUser(boolean user) {
+        isUser = user;
+    }
+
+    public void setNurse(boolean nurse) {
+        isNurse = nurse;
+    }
+
+    public boolean isDoctor() {
+        return isDoctor;
+    }
+
+    public void setDoctor(boolean doctor) {
+        isDoctor = doctor;
     }
 
     //method for token and email setup for all classes

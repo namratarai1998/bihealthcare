@@ -9,7 +9,16 @@ public class LoginResponse {
     private String accessToken;
     private String mesasge;
     private boolean status;
-    private Integer userId;
+    private int userId;
+    private String type;
+
+    public String getUsertype() {
+        return type;
+    }
+
+    public void setUsertype(String usertype) {
+        this.type = usertype;
+    }
 
     public String getEmail() {
         return email;
@@ -43,11 +52,11 @@ public class LoginResponse {
         this.status = status;
     }
 
-    public Integer getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 }

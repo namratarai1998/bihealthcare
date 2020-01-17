@@ -4,11 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-<<<<<<< HEAD
-=======
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -21,10 +16,6 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
 import java.util.Objects;
 
 public class PatientVisualization extends AppCompatActivity implements View.OnClickListener {
@@ -33,11 +24,7 @@ public class PatientVisualization extends AppCompatActivity implements View.OnCl
     private ProgressBar progressBar;
     private SwipeRefreshLayout refreshWebView;
 
-<<<<<<< HEAD
-    String url = "https://public.tableau.com/views/PatientChart/PatientSatisfaction?:display_count=y&publish=yes&:origin=viz_share_link";
-=======
-    String url = "https://public.tableau.com/views/HackMT-PUBGAnalysis_15778409308240/Dashboard1?:display_count=y&:origin=viz_share_link";
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
+    String url = "https://public.tableau.com/views/GameAddictionByAgeLevelPart1/Dashboard1?:display_count=y&:origin=viz_share_link";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,15 +47,9 @@ public class PatientVisualization extends AppCompatActivity implements View.OnCl
                 finishAfterTransition();
             }
         });
-<<<<<<< HEAD
         initWebView();
         webView.loadUrl(url);
         setDesktopMode(webView,true);
-=======
-
-        initWebView();
-        webView.loadUrl(url);
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
         refreshWebView.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -78,7 +59,6 @@ public class PatientVisualization extends AppCompatActivity implements View.OnCl
             }
         });
     }
-<<<<<<< HEAD
     public void setDesktopMode(WebView webView,boolean enabled) {
         String newUserAgent = webView.getSettings().getUserAgentString();
         if (enabled) {
@@ -106,43 +86,18 @@ public class PatientVisualization extends AppCompatActivity implements View.OnCl
         webView.getSettings().setSupportZoom(true);
         webView.getSettings().setBuiltInZoomControls(true);
         webView.setWebChromeClient(new  PatientVisualization.MyWebChromeClient(this));
-=======
-    @SuppressLint("SetJavaScriptEnabled")
-    private void initWebView() {
-
-        webView.getSettings().setSupportZoom(true);
-
-        webView.getSettings().setBuiltInZoomControls(true);
-
-        webView.setWebChromeClient(new  PatientVisualization.MyWebChromeClient(this));
-
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
                 progressBar.setVisibility(View.VISIBLE);
             }
-<<<<<<< HEAD
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String newURL) {
                 webView.loadUrl(newURL);
                 url = newURL;
                 Objects.requireNonNull(getSupportActionBar()).setSubtitle(newURL);
                 return true;
-=======
-
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String newURL) {
-
-                webView.loadUrl(newURL);
-                url = newURL;
-
-
-                Objects.requireNonNull(getSupportActionBar()).setSubtitle(newURL);
-                return true;
-
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
             }
 
             @Override
@@ -186,4 +141,3 @@ public class PatientVisualization extends AppCompatActivity implements View.OnCl
         }
     }
 }
-

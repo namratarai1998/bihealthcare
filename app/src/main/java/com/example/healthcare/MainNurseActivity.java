@@ -4,24 +4,26 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainNurseActivity extends AppCompatActivity implements View.OnClickListener{
 
 
     ImageView bgapp, clover;
-    LinearLayout textsplash,texthome,menus, btnViewPatient, btnViewAppointment;
+    LinearLayout textsplash, texthome, menus, btnAddPatient, btnViewPatients;
     Animation frombottom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_nurse);
         init();
     }
+
     private void init() {
         bgapp = findViewById(R.id.bgapp);
         clover = findViewById(R.id.clover);
@@ -29,10 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         texthome = findViewById(R.id.texthome);
         menus = findViewById(R.id.menus);
 
-        btnViewAppointment = findViewById(R.id.liyViewAppintment);
-        btnViewPatient = findViewById(R.id.liyViewPatient);
-        btnViewAppointment.setOnClickListener(this);
-        btnViewPatient.setOnClickListener(this);
+        btnViewPatients = findViewById(R.id.liyViewPatients);
+        btnAddPatient = findViewById(R.id.liyAddPatient);
+        btnViewPatients.setOnClickListener(this);
+        btnAddPatient.setOnClickListener(this);
         animateDashboardBackground();
     }
 
@@ -50,18 +52,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.liyViewAppintment:
-//                Intent ii = new Intent(this, AppointmentActivity.class);
-//                startActivity(ii);
-                break;
-            case R.id.liyViewPatient:
-                Intent iiii = new Intent(this, PatientlistActivity.class);
+            case R.id.liyAddPatient:
+                Intent iiii = new Intent(this, AddpatientActivity.class);
                 startActivity(iiii);
+                break;
+            case R.id.liyViewPatients:
+                Intent iii = new Intent(this, PatientlistActivity.class);
+                startActivity(iii);
                 break;
 
             default:
                 System.out.println("nothing");
         }
 
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
     }
 }

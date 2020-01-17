@@ -12,7 +12,7 @@ public class UserModel {
 
 
 
-    public UserModel(int userid,String email, String password, String usertype) {
+    public UserModel(String email, String password, String usertype) {
         this.email = email;
         this.userid = userid;
         this.password = password;

@@ -39,12 +39,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnSignup = findViewById(R.id.btnSignup);
         btnLoginAction.setOnClickListener(this);
         btnSignup.setOnClickListener(this);
-        txtUserEmail.setText("namrata@gmail.com");
-        txtUserPassword.setText("Namra1");
-<<<<<<< HEAD
-=======
-
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
+        txtUserEmail.setText("test@gmail.com");
+        txtUserPassword.setText("123123");
         if (android.os.Build.VERSION.SDK_INT > 9)
         {
             android.os.StrictMode.ThreadPolicy threadPolicy = new android.os.StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -56,14 +52,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnLoginAction:
-<<<<<<< HEAD
                 doLogin();
-=======
-//                doLogin();
-                Intent i = new Intent(LoginActivity.this,MainActivity.class);
-                startActivity(i);
-
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
                 break;
             case R.id.btnSignup:
                 openActivity(RegistrationActivity.class);
@@ -71,45 +60,35 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             default:
         }
     }
-<<<<<<< HEAD
 
     private void doLogin() {
         try {
             //Test Phase
-            Intent i = new Intent(this, PatientlistActivity.class);
-            startActivity(i);
+//            Intent i = new Intent(this, MainNurseActivity.class);
+//            startActivity(i);
 
-//            if (validation()) {
-//                return;
-//            } else {
-//                usermodel =  new UserModel(0,txtUserEmail.getText().toString(),
-//                        txtUserPassword.getText().toString(),null);
-//                loginController = new LoginController(usermodel);
-//                if (loginController.checkLogin()) {
-//                    Intent i = new Intent(this, MainActivity.class);
-//                    startActivity(i);
-//                } else {
-//                    ShowMessage.AlertMessage("Error", "Not loged in", R.color.bgColor, this);
-//                }
-//            }
-        } catch (Exception e) {
-            ShowMessage.AlertMessage("Error", "Failed", R.color.bgColor, this);
-        }
-    }
-
-=======
-
-    private void doLogin() {
-        try {
             if (validation()) {
                 return;
             } else {
-                usermodel =  new UserModel(0,txtUserEmail.getText().toString(),
+                usermodel =  new UserModel(txtUserEmail.getText().toString(),
                         txtUserPassword.getText().toString(),null);
                 loginController = new LoginController(usermodel);
                 if (loginController.checkLogin()) {
-                    Intent i = new Intent(this, AddDoctorActivity.class);
-                    startActivity(i);
+                    if(loginController.isDoctor()){
+                        Intent i = new Intent(this, MainActivity.class);
+                        startActivity(i);
+                    }else if(loginController.isNurse()){
+                        Intent i = new Intent(this, MainNurseActivity.class);
+                        startActivity(i);
+                    }else if(loginController.isUser()){
+                        Intent i = new Intent(this, MainPatientActivity.class);
+                        startActivity(i);
+                    }
+
+//                    Intent i = new Intent(this, MainActivity.class);
+//                    startActivity(i);
+//                    ShowMessage.AlertMessage("Error", "Loged in", R.color.bgColor, this);
+
                 } else {
                     ShowMessage.AlertMessage("Error", "Not loged in", R.color.bgColor, this);
                 }
@@ -119,7 +98,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
     private boolean validation() {
         if (TextUtils.isEmpty(txtUserEmail.getText().toString())) {
             errorValidation(txtUserEmail, "Enter email address");

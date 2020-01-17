@@ -84,10 +84,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-<<<<<<< HEAD
-=======
         android:alpha="0.23"
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
         android:background="@drawable/textviewshape"
         android:ems="10"
         android:inputType="textPersonName"
@@ -124,17 +121,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-<<<<<<< HEAD
-        android:background="@drawable/textviewshape"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:textColor="@color/black"
-=======
         android:alpha="0.23"
         android:background="@drawable/textviewshape"
         android:ems="10"
         android:inputType="textPersonName"
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.712"
@@ -180,10 +171,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-<<<<<<< HEAD
-=======
         android:alpha="0.23"
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
         android:background="@drawable/textviewshape"
         android:ems="10"
         android:inputType="textPersonName"
@@ -216,11 +204,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="49dp"
-<<<<<<< HEAD
         android:alpha="0.5"
-=======
-        android:alpha="0.23"
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
         android:background="@drawable/textviewshape"
         android:ems="10"
         android:entries="@array/spinnerUsetype"

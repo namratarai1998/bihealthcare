@@ -147,25 +147,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.003" />
 
-<<<<<<< HEAD
-=======
-    <TextView
-        android:id="@+id/txtUsertype"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="ForgotPassword?"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/txtLoginPwd"
-        app:layout_constraintVertical_bias="0.152" />
-
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
     <Button
         android:id="@+id/btnLoginAction"
         android:layout_width="175dp"

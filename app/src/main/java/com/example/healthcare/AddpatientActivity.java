@@ -18,7 +18,8 @@ public class AddpatientActivity extends AppCompatActivity implements View.OnClic
     private Button btnAddpatient;
     private ImageButton btnNext;
     private EditText etName, etAge, etAddress, etContact, etDate,etSummary;
-    private Spinner spinGender, spinWard;
+
+    private Spinner spinGender, spinWard,spinPatientType;
     private PatientModel patientModel;
     private PatientController patientController;
     private int counter = 0;
@@ -37,7 +38,7 @@ public class AddpatientActivity extends AppCompatActivity implements View.OnClic
         etSummary = findViewById(R.id.etSummary  );
         spinWard = findViewById(R.id.spinWard);
         spinGender = findViewById(R.id.spinGender);
-
+        spinPatientType = findViewById(R.id.spinPatientType);
         btnAddpatient.setOnClickListener(this);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,15 +56,16 @@ public class AddpatientActivity extends AppCompatActivity implements View.OnClic
 //        if (validation()) {
 //            return;
 //        } else {
-        counter++;
+//        counter++;
         String patientName=etName.getText().toString();
         String patientAge = etAge.getText().toString();
         String patientAddress= etAddress.getText().toString();
         String patientContact = etContact.getText().toString();
         String patientWard = spinWard.getSelectedItem().toString();
+        String patientType = spinPatientType.getSelectedItem().toString();
         String patientGender= spinGender.getSelectedItem().toString();
         String patientSummary= etSummary.getText().toString();
-        patientModel = new PatientModel(counter,patientName, patientAddress,patientAge,patientGender,patientContact,patientWard,patientSummary);
+        patientModel = new PatientModel(patientName, patientAddress,patientAge,patientGender,patientContact,patientWard,patientType,patientSummary);
         patientController = new PatientController(AddpatientActivity.this);
         patientController.addPatient(patientModel);
 //        }

@@ -1,14 +1,19 @@
 <resources>
     <string name="app_name">Healthcare</string>
     <string name="title_activity_patient_list">PatientList</string>
-
-
+    
+    
     <string-array name="spinnerItems">
         <item>Male</item>
         <item>Female</item>
         <item>Others</item>
     </string-array>
-
+    
+    <string-array name="patientType">
+        <item>Inpatient</item>
+        <item>Outpatient</item>
+    </string-array>
+    
     <string-array name="spinnerWard">
         <item>Emergency department</item>
         <item>Cardiology</item>
@@ -17,8 +22,8 @@
         <item>Oncology</item>
         <item>Obstetrics and gynaecology</item>
     </string-array>
-
-
+    
+    
     <string-array name="spinnerDisease">
         <item>Emergency department</item>
         <item>Cardiology</item>
@@ -27,8 +32,8 @@
         <item>Oncology</item>
         <item>Obstetrics and gynaecology</item>
     </string-array>
-
-
+    
+    
     <string-array name="spinnerTreatment">
         <item>Emergency department</item>
         <item>Cardiology</item>
@@ -37,24 +42,14 @@
         <item>Oncology</item>
         <item>Obstetrics and gynaecology</item>
     </string-array>
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
     <string-array name="spinnerUsetype">
         <item>Doctor</item>
         <item>Nurse</item>
         <item>User</item>
     </string-array>
-<<<<<<< HEAD
-
+    
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-=======
-    
-    
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
 </resources>

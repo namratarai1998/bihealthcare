@@ -142,15 +142,7 @@
         android:textColorHint="#606060"
         android:layout_marginBottom="10dp" />
 
-    <TextView
-        android:id="@+id/tvStay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvDatedischarged"
-        android:textSize="20dp"
-        android:text="Length of Stay"
-        android:textColorHint="#606060"
-        android:layout_marginBottom="10dp" />
+    
 
     </LinearLayout>
 

@@ -203,7 +203,28 @@
                             android:textSize="15sp" />
                     
                     </android.support.design.widget.TextInputLayout>
-                    
+                 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="Gender"
+                        android:textColor="#A39797"
+                        android:textSize="15dp" />
+    
+                    <Spinner
+                        android:id="@+id/spinPatientType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:entries="@array/patientType"></Spinner>
+    
+    
+    
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -244,11 +265,7 @@
                         android:id="@+id/etSummary"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-<<<<<<< HEAD
                         android:layout_marginStart="40dp"
-=======
-                        android:layout_marginStart="20dp"
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
                         android:layout_marginEnd="20dp"
                         android:drawablePadding="10dp"
                         android:inputType="text|textMultiLine"

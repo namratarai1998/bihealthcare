@@ -46,8 +46,8 @@ btnRegister.setOnClickListener(this);
         if (validation()) {
             return;
         } else {
-            counter++;
-            userModel = new UserModel(counter,txtEmail.getText().toString(),
+//            counter++;
+            userModel = new UserModel(txtEmail.getText().toString(),
                     txtPwdC.getText().toString(),
                     chooseUserType.getSelectedItem().toString());
             registerController = new RegisterController(RegistrationActivity.this);

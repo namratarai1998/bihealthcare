@@ -9,19 +9,19 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-
-
+public class MainPatientActivity extends AppCompatActivity implements View.OnClickListener {
     ImageView bgapp, clover;
-    LinearLayout textsplash,texthome,menus, btnViewPatient, btnViewAppointment;
+    LinearLayout textsplash, texthome, menus, btnViewReport, btnBookAppoint,btnSatisfaction;
     Animation frombottom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_patient);
         init();
     }
+
+
     private void init() {
         bgapp = findViewById(R.id.bgapp);
         clover = findViewById(R.id.clover);
@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         texthome = findViewById(R.id.texthome);
         menus = findViewById(R.id.menus);
 
-        btnViewAppointment = findViewById(R.id.liyViewAppintment);
-        btnViewPatient = findViewById(R.id.liyViewPatient);
-        btnViewAppointment.setOnClickListener(this);
-        btnViewPatient.setOnClickListener(this);
+        btnBookAppoint = findViewById(R.id.liyBookAppoint);
+        btnViewReport = findViewById(R.id.liyViewReportPatient);
+        btnSatisfaction = findViewById(R.id.liySatisfaction);
+
         animateDashboardBackground();
     }
 
@@ -50,18 +50,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.liyViewAppintment:
-//                Intent ii = new Intent(this, AppointmentActivity.class);
-//                startActivity(ii);
-                break;
-            case R.id.liyViewPatient:
-                Intent iiii = new Intent(this, PatientlistActivity.class);
+            case R.id.liyBookAppoint:
+                Intent iiii = new Intent(this, DoctorlistActivity.class);
                 startActivity(iiii);
+                break;
+            case R.id.liyViewReportPatient:
+                Intent iii = new Intent(this, PatientlistActivity.class);
+                startActivity(iii);
+                break;
+
+            case R.id.liySatisfaction:
+                Intent iiiii = new Intent(this, PatientsatisfactionActivity.class);
+                startActivity(iiiii);
                 break;
 
             default:
                 System.out.println("nothing");
         }
 
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
     }
 }

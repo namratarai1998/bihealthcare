@@ -34,11 +34,9 @@ public class DoctorController {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.isSuccessful()) {
-<<<<<<< HEAD
+
                     ShowMessage.AlertMessage("Success", "Doctor Detail Added!", R.color.gradient_end_color,     activity);
-=======
-                    ShowMessage.AlertMessage("Success", "Doctor Detail Added!", R.color.gradient_end_color, activity);
->>>>>>> 35bbf15d520d935c37640b7f9fc86ce9ac2616b5
+
                 } else {
                     ShowMessage.AlertMessage("Not Success", "Doctor detail not added", R.color.gradient_end_color, activity);
                 }

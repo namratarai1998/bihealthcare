@@ -84,6 +84,7 @@
                         android:textSize="15sp" />
 
                     <EditText
+                        android:id="@+id/txtMaxBP"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginStart="20dp"
@@ -107,6 +108,7 @@
                         android:textSize="15sp" />
 
                     <EditText
+                        android:id="@+id/txtMinBP"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginStart="20dp"
@@ -129,6 +131,7 @@
                         android:textSize="15sp" />
 
                     <EditText
+                        android:id="@+id/txtGLevel"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginStart="20dp"
@@ -152,7 +155,7 @@
                 android:elevation="10dp">
 
                 <Button
-                    android:id="@+id/btnReport"
+                    android:id="@+id/btnAddReport"
                     style="@style/btnStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

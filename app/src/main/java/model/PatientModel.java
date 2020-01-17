@@ -1,96 +1,152 @@
 package model;
 
 public class PatientModel {
-    private int patient_id;
-    private String name;
-    private String address;
-    private String age;
-    private String gender;
-    private String contact_no;
-    private String ward_name;
-    private String summary;
+    private int PATIENT_ID;
+    private String NAME;
+    private String ADDRESS;
+    private String AGE;
+    private String GENDER;
+    private String CONTACT_NO;
+    private String WARD_NAME;
+    private String PATIENT_TYPE;
+    private String SUMMARY;
+    private String DATES;
 //    private String dates;
+private String appointDoctor;
+    private String discharge;
+    private String treatmentby;
+
+    public String getStayLength() {
+        return stayLength;
+    }
+
+    public void setStayLength(String stayLength) {
+        this.stayLength = stayLength;
+    }
+
+    private String stayLength;
+
+    public String getAppointDoctor() {
+        return appointDoctor;
+    }
+
+    public void setAppointDoctor(String appointDoctor) {
+        this.appointDoctor = appointDoctor;
+    }
+
+    public String getDischarge() {
+        return discharge;
+    }
+
+    public void setDischarge(String discharge) {
+        this.discharge = discharge;
+    }
+
+    public String getTreatmentby() {
+        return treatmentby;
+    }
+
+    public void setTreatmentby(String treatmentby) {
+        this.treatmentby = treatmentby;
+    }
 
 
-    public PatientModel(int patient_id,
-                        String name,
-                        String address,
+    public PatientModel(String name,
+                        String ADDRESS,
                         String age,
-                        String gender,
-                        String contact_no,
+                        String GENDER,
+                        String CONTACT_NO,
                         String ward_name,
+                        String patient_type,
                         String summary) {
-        this.name=name;
-        this.patient_id = patient_id;
-        this.address = address;
-        this.age = age;
-        this.gender = gender;
-        this.contact_no = contact_no;
-        this.ward_name = ward_name;
-        this.summary = summary;
+        this.NAME=name;
+        this.PATIENT_ID = PATIENT_ID;
+        this.ADDRESS = ADDRESS;
+        this.AGE = age;
+        this.GENDER = GENDER;
+        this.CONTACT_NO = CONTACT_NO;
+        this.WARD_NAME = ward_name;
+        this.PATIENT_TYPE = patient_type;
+        this.SUMMARY = summary;
+    }
+
+    public String getDATES() {
+        return DATES;
+    }
+
+    public void setDATES(String DATES) {
+        this.DATES = DATES;
     }
 
     public String getName() {
-        return name;
+        return NAME;
+    }
+
+    public String getPatient_type() {
+        return PATIENT_TYPE;
+    }
+
+    public void setPatient_type(String patient_type) {
+        this.PATIENT_TYPE = patient_type;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.NAME = name;
     }
 
     public int getPatient_id() {
-        return patient_id;
+        return PATIENT_ID;
     }
 
     public void setPatient_id(int patient_id) {
-        this.patient_id = patient_id;
+        this.PATIENT_ID = patient_id;
     }
 
-    public String getAddress() {
-        return address;
+    public String getADDRESS() {
+        return ADDRESS;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setADDRESS(String ADDRESS) {
+        this.ADDRESS = ADDRESS;
     }
 
     public String getAge() {
-        return age;
+        return AGE;
     }
 
     public void setAge(String age) {
-        this.age = age;
+        this.AGE = age;
     }
 
-    public String getGender() {
-        return gender;
+    public String getGENDER() {
+        return GENDER;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setGENDER(String GENDER) {
+        this.GENDER = GENDER;
     }
 
-    public String getContact_no() {
-        return contact_no;
+    public String getCONTACT_NO() {
+        return CONTACT_NO;
     }
 
-    public void setContact_no(String contact_no) {
-        this.contact_no = contact_no;
+    public void setCONTACT_NO(String CONTACT_NO) {
+        this.CONTACT_NO = CONTACT_NO;
     }
 
     public String getWard_name() {
-        return ward_name;
+        return WARD_NAME;
     }
 
     public void setWard_name(String ward_name) {
-        this.ward_name = ward_name;
+        this.WARD_NAME = ward_name;
     }
 
     public String getSummary() {
-        return summary;
+        return SUMMARY;
     }
 
     public void setSummary(String summary) {
-        this.summary = summary;
+        this.SUMMARY = summary;
     }
 }
